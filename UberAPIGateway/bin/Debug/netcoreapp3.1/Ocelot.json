@@ -1,0 +1,80 @@
+//{
+//  "ReRoutes": [
+//    {
+//      "DownStreamPathTemplate": "/api/Passenger",
+//      "DownStreamSchema": "https",
+//      "DownStreamHostAndPorts": [
+//        {
+//          "Host": "localhost",
+//          "Port": 44367
+//        }
+//      ],
+//      "UpStreamPathTemplate": "/apigateway/PassengerController",
+//      "UpStreamHttpMethod": [ "Get", "Put", "Post" ]
+//    },
+//    {
+//      "DownStreamPathTemplate": "/api/Driver",
+//      "DownStreamSchema": "https",
+//      "DownStreamHostAndPorts": [
+//        {
+//          "Host": "localhost",
+//          "Port": 44397
+//        }
+//      ],
+//      "UpStreamPathTemplate": "/apigateway/DriverController",
+//      "UpStreamHttpMethod": [ "Get", "Put", "Post" ]
+//    }
+//  ]
+//}
+{
+  "ReRoutes": [
+    {
+      "DownStreamPathTemplate": "/api/Passenger",
+      "DownStreamSchema": "https",
+      "DownStreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44367
+        }
+      ],
+      "UpStreamPathTemplate": "/apigateway/PassengerController",
+      "UpStreamHttpMethod": [ "Get", "Post" ]
+    },
+    {
+      "DownStreamPathTemplate": "/api/Passenger/{id}",
+      "DownStreamSchema": "https",
+      "DownStreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44367
+        }
+      ],
+      "UpStreamPathTemplate": "/apigateway/PassengerController/{id}",
+      "UpStreamHttpMethod": [ "Get", "Put", "Delete" ]
+    },
+    {
+      "DownStreamPathTemplate": "/api/Driver",
+      "DownStreamSchema": "https",
+      "DownStreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44397
+        }
+      ],
+      "UpStreamPathTemplate": "/apigateway/DriverController",
+      "UpStreamHttpMethod": [ "Get", "Post"]
+    },
+    {
+      "DownStreamPathTemplate": "/api/Driver/{id}",
+      "DownStreamSchema": "https",
+      "DownStreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44397
+        }
+      ],
+      "UpStreamPathTemplate": "/apigateway/DriverController/{id}",
+      "UpStreamHttpMethod": [ "Get", "Put", "Delete" ]
+    }
+  ]
+}
